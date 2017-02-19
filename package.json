@@ -4,10 +4,12 @@
   "description": "Web App Dashboard",
   "main": "index.js",
   "repository": {
-    "type": "git", 
-    "url": "https://gitlab.com/mavid/starterKit.git"},
+    "type": "git",
+    "url": "https://gitlab.com/mavid/starterKit.git"
+  },
   "bugs": {
-    "url": "https://gitlab.com/mavid/starterKit/issues"},
+    "url": "https://gitlab.com/mavid/starterKit/issues"
+  },
   "author": "Mattia Piano",
   "license": "MIT",
   "devDependencies": {
@@ -24,6 +26,7 @@
     "gulp-sourcemaps": "^2.4.1",
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^2.0.1",
+    "typographic": "^3.0.0",
     "yargs": "^6.6.0"
   }
 }

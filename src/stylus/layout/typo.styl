@@ -1,0 +1,44 @@
+body
+  font: normal normal normal .625rem 'Nunito', sans-serif;
+  font-size-adjust: 0.5;
+
+//fibonacci grid
+h1 { font-size: 6.7773em; }
+h2 { font-size: 4.1887em; }
+h3 { font-size: 2.5888em; }
+h4 { font-size: 1.8em; }
+p { font-size: 1.6em; /* 10 x 1.6 = 16 */ }
+
+
+
+b,
+strong
+  font-weight: 800
+i, em
+  font-style: italic
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -1em;
+}
+sub { 
+  top: 1em; 
+}
+
+// main nav
+.main-title
+  @extend h4
+  sup
+    font-size: .4em
+    font-weight: 200
+
+
+.user-menu p
+  font-size: 1.2em
+
+// footer
+footer
+  p
+    font-size: 1em
+    margin-top: 8px

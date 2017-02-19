@@ -1,0 +1,44 @@
+nav.main-nav
+  display: flex
+  align-items: center
+  .notify
+    display: flex;
+    padding: 1.85em 1em
+    margin-right: -1px
+    img
+      width 18px
+      height 18px
+    &:after
+      content ''
+      width 5px
+      height 5px
+      background-color color_success
+      border-radius: 100%
+      position: relative
+      right: 2px
+      top: -3px
+  .user-menu
+    display: flex
+    align-items: center
+    padding-left: 1.25em
+    border-left: 1px solid darken(lilla, 8%)
+    img
+      height 30px
+      width 30px
+      border-radius: 100%
+      margin-right: .65em
+
+nav.footer-nav
+    display: flex
+    flex-direction: row
+    align-items: center
+    text-align: center
+    justify-content: space-around
+    color: white
+  .controls
+    padding: 1em
+    flex: 1 1
+    img
+      width 30px
+    &:hover
+      background-color darken(lilla, 8%)

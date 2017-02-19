@@ -6,6 +6,29 @@ head
   title Front-End Starter Kit
   link(rel="stylesheet", href="css/app.css")
 body
-  
+  #wrapper
+    header.main-header
+      h1.main-title <b>Your</b>App<sup>TM</sup>
+      nav.main-nav
+        .notify
+          img(src="img/icons/icon-bell.svg", alt="Notify Icon")
+        .user-menu
+          img(src="img/user.gif", alt="User Photo")
+          p Mattia Piano
+    footer
+      nav.footer-nav
+        .controls.controls--dashboard
+          img(src="img/icons/icon-dashboard.svg", alt="icon dashboard")
+          p dashboard
+        .controls.controls--members
+          img(src="img/icons/icon-members.svg", alt="icon members")
+          p members
+        .controls.controls--dashboard
+          img(src="img/icons/icon-visits.svg", alt="icon visits")
+          p visits
+        .controls.controls--settings
+          img(src="img/icons/icon-settings.svg", alt="icon settings")
+          p settings
+        
   script(src="js/app.js")
   

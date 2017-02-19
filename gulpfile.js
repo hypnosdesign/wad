@@ -14,7 +14,8 @@ const gulp        = require('gulp'),
 
       when        = require('gulp-if'),
       argv        = require('yargs').argv,
-      del         = require('del');
+      del         = require('del'),
+      typographic = require('typographic');
 
 /***********************
  * BROWSER SYNC
