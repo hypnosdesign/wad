@@ -25,7 +25,7 @@ gulp.task('browser-sync', () => {
         server: { baseDir: "./app" },
         browser: 'google chrome canary',
         host: "localhost",
-        open: true,
+        open: false,
         notify: false,
         port: 3000
     });
