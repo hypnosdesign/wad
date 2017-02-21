@@ -9,7 +9,7 @@
     display: flex
     align-items: center
     margin: 1em 2em
-    padding: 1em 2em
+    padding: 1.6em 2em
     border: 1px solid border_grey
     border-radius: 4px
     background-color #fbfbfb
@@ -21,17 +21,72 @@
     .social-number
       font-size: 3em
       font-weight: 200
+      color: #666
 
     .social-img
-      padding: 1em
+      padding: 1.6em
       
       background-color lilla
       border-radius: 100%
       width 60px
       height 60px
+
       img
-        image-v(40px)
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
     .social-text
       margin-left: 1.8em
-  .social-box--facebook
-    //margin: 2em
+
+.box-new-member,
+.box-activity
+  padding: 1.2em 2em 1.2em 0
+  margin: 0 1.6em
+  border-bottom: 1px solid border_grey
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-start
+  
+  color: #555
+  &:last-child
+    border none
+  img
+    display: block
+    border-radius 100%
+    width 40px
+    height 40px
+
+
+p.date,
+p.activity
+  font-size: 1.2em
+
+.box-members-text,
+.box-members-activity
+  margin-left: 1em
+  margin-right: auto
+  overflow: hidden
+
+p.name
+  font-size: 1.4em
+p.email,
+p.time
+  font-size: 1.3em
+  color: lilla
+p.time
+  color: #555
+p.activity
+  font-size: 1.3em
+p.arrow
+  width 10px
+  height 10px
+  border-left: 1px solid lilla
+  border-bottom: 1px solid lilla
+  background-color transparent
+  transform: rotate(230deg)
+  padding: 6px
+  margin-left: 8px

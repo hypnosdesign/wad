@@ -3,7 +3,7 @@ html(lang="en")
 head
   meta(charset="UTF-8")
   meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
-  title Front-End Starter Kit
+  title Web App Dashboard
   link(rel="stylesheet", href="css/app.css")
 body
   #wrapper
@@ -22,7 +22,14 @@ body
         input(type="search", placeholder="Search")
     #wrapper-sections
       section.box.box--traffic
-        h4 traffic
+        h4.f-left traffic
+        .menu-traffic
+          p.hourly Hourly
+          p.daily Daily
+          p.weekly Weekly
+          p.monthly Monthly
+        .chart-container
+          canvas(id="traffic-chart")
       section.box.box--daily-traffic
         h4 daily traffic
       section.box.box--mobile-users
@@ -56,12 +63,69 @@ body
               p.social-number 6,913
       section.box.box--new-members
         h4 new members
+        .box-new-member
+          img(src="img/members/victoria.jpg", alt="Photo member")
+          .box-members-text
+            p.name Victoria Chambers
+            p.email victoria.chambers80@example.com
+          p.date 10/15/15
+        .box-new-member
+          img(src="img/members/dale.jpg", alt="Photo member")
+          .box-members-text
+            p.name Dale Byrd
+            p.email dale.bird52@example.com
+          p.date 10/15/15
+        .box-new-member
+          img(src="img/members/dawn.jpg", alt="Photo member")
+          .box-members-text
+            p.name Dawn Wood
+            p.email dawn.wood16@example.com
+          p.date 10/15/15
+        .box-new-member
+          img(src="img/members/dan.jpg", alt="Photo member")
+          .box-members-text
+            p.name Dan Oliver
+            p.email dan.oliver82@example.com
+          p.date 10/15/15
       section.box.box--recent-activity
         h4 recent activity
+        .box-activity
+          img(src="img/members/victoria.jpg", alt="Photo member")
+          .box-members-activity
+            p.activity Victoria Chambers commented on YourApp's SEO Tips
+            p.time 4 hours ago
+          p.arrow
+        .box-activity
+          img(src="img/members/dale.jpg", alt="Photo member")
+          .box-members-activity
+            p.activity Dale Byrd
+            p.time 5 hours ago
+          p.arrow
+        .box-activity
+          img(src="img/members/dawn.jpg", alt="Photo member")
+          .box-members-activity
+            p.activity Dawn Wood
+            p.time 5 hours ago
+          p.arrow
+        .box-activity
+          img(src="img/members/dan.jpg", alt="Photo member")
+          .box-members-activity
+            p.activity Dan Oliver
+            p.time 1 day ago
+          p.arrow
       section.box.box--message-user
         h4 message user
+        form(action="")
+          input(type="search" placeholder="Search for User")
+          textarea(placeholder="Message for User")
+          button(type="submit") send
       section.box.box--settings
         h4 settings
+        p.send-email Send Email Notification
+        p.set-profile Set profile to pubblic
+        input(type="text")
+        button save
+        button cancell
     footer
       nav.footer-nav
         .controls.controls--dashboard

@@ -93,10 +93,7 @@ gulp.task('stylus', ()=> {
 
 gulp.task('js', ()=> {
   return gulp.src([
-    //'./src/js/libs/jquery.js',
-    './src/js/libs/p5/p5.js',
-    './src/js/libs/p5/p5.dom.js',
-    //'./src/js/libs/p5/p5.sound.js',
+    './src/js/libs/Chart.bundle.js',
     './src/js/app.js'
     ])
     .pipe(plumber())

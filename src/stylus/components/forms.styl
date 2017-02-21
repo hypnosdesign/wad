@@ -1,5 +1,6 @@
 //reset forms elements
-input
+input,
+textarea
   border: none
   outline: none
   background-color transparent
@@ -8,12 +9,30 @@ input
   &:select
     outline: 0
 
-.box-search
-    input
-      float: right
-      padding: .65em 1.35em
-      color: #777
-      font-size: 1.225em
-      border: 1px solid border_grey
-      border-radius: 6px
-      max-width: 100%
+
+input
+  float: right
+  padding: .65em 1.35em
+  color: #666
+  font-size: 1.4em
+  border: 1px solid border_grey
+  border-radius: 6px
+  max-width: 100%
+
+.box--message-user
+  form
+    padding: 0 1.4em
+  input,
+  textarea
+    @extend input
+    background-color #f5f5f5
+    margin-bottom: 1.6em
+    float: none
+    width: 100%
+  textarea
+    height 130px
+    padding: 1.1em 1.35em
+
+    
+
+
