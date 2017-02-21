@@ -18,3 +18,61 @@ button
 
 .notify:hover
   background-color darken(lilla, 8%)
+
+.settings-container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: .5em 2em
+  max-width 500px
+  margin: 0 auto
+
+.switch-container
+  display: inline-block
+  position: relative
+  span.point
+    display: inline-block
+    width: 26px
+    height: 26px
+    position: absolute
+    left: 2px
+    top: 2px
+    background: #f9f9f9
+    border-radius: 50%
+    transform: translateX(0%)
+    transition: transform .4s
+    z-index: 2
+  .switch
+    background: #e6e6e6
+    border-radius: 30px
+    cursor: pointer;
+    display: inline-block
+    height: 30px
+    position: relative
+    width: 60px
+    transition: background .4s
+    &:after
+      content 'off'
+      line-height: 30px
+      position: absolute
+      font-weight: 900
+      text-transform: uppercase
+      right: 8px
+      color: white
+      z-index: 1
+    &:before
+      content 'on'
+      line-height: 30px
+      position: absolute
+      font-weight: 900
+      text-transform: uppercase
+      left: 8px
+      color: white
+      z-index: 1
+    &-checkbox
+      display: none
+      &:checked ~ .switch
+        background: lilla
+        span.point
+          transform: translateX(100%)
+          left: 6px

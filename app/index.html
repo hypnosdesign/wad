@@ -38,9 +38,15 @@
       </section>
       <section class="box box--daily-traffic">
         <h4>daily traffic</h4>
+        <div class="chart-container">
+          <canvas id="daily-traffic-chart"></canvas>
+        </div>
       </section>
       <section class="box box--mobile-users">
         <h4>mobile users</h4>
+        <div class="chart-container">
+          <canvas id="mobile-users-chart"></canvas>
+        </div>
       </section>
       <section class="box box--social">
         <h4>social stats</h4>
@@ -147,11 +153,25 @@
       </section>
       <section class="box box--settings">
         <h4>settings</h4>
-        <p class="send-email">Send Email Notification</p>
-        <p class="set-profile">Set profile to pubblic</p>
-        <input type="text"/>
-        <button>save</button>
-        <button>cancell</button>
+        <div class="settings-container">
+          <p class="send-email">Send Email Notification</p>
+          <div class="switch-container">
+            <input class="switch-checkbox" type="checkbox" id="switch_1"/>
+            <label class="switch" for="switch_1"><span class="point"></span></label>
+          </div>
+        </div>
+        <div class="settings-container">
+          <p class="set-profile">Set profile to pubblic</p>
+          <div class="switch-container">
+            <input class="switch-checkbox" type="checkbox" id="switch_2"/>
+            <label class="switch" for="switch_2"><span class="point"></span></label>
+          </div>
+        </div>
+        <div class="time-zone-container">
+          <input type="text" placeholder="Select Timezone"/>
+          <button>save</button>
+          <button>cancell</button>
+        </div>
       </section>
     </div>
     <footer>

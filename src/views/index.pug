@@ -32,8 +32,12 @@ body
           canvas(id="traffic-chart")
       section.box.box--daily-traffic
         h4 daily traffic
+        .chart-container
+          canvas(id="daily-traffic-chart")
       section.box.box--mobile-users
         h4 mobile users
+        .chart-container
+          canvas(id="mobile-users-chart")
       section.box.box--social
         h4 social stats
         .social-box
@@ -121,11 +125,23 @@ body
           button(type="submit") send
       section.box.box--settings
         h4 settings
-        p.send-email Send Email Notification
-        p.set-profile Set profile to pubblic
-        input(type="text")
-        button save
-        button cancell
+        .settings-container
+          p.send-email Send Email Notification
+          .switch-container
+            input(class="switch-checkbox" type="checkbox" id="switch_1")
+            label(class="switch" for="switch_1")
+              span.point
+            
+        .settings-container
+          p.set-profile Set profile to pubblic
+          .switch-container
+            input(class="switch-checkbox" type="checkbox" id="switch_2")
+            label(class="switch" for="switch_2")
+              span.point
+        .time-zone-container
+          input(type="text" placeholder="Select Timezone")
+          button save
+          button cancell
     footer
       nav.footer-nav
         .controls.controls--dashboard

@@ -16081,7 +16081,12 @@
         }]
     }, {}, [7])(7)
 });
-let ctx = document.getElementById('traffic-chart');
+//get Traffic line Chart canvas
+const ctx = document.getElementById('traffic-chart');
+// get Daily traffic bar chart canvas
+const dtc = document.getElementById('daily-traffic-chart');
+// get Mobile Users pie Chart canvas
+const muc = document.getElementById('mobile-users-chart');
 
 let trafficChart = new Chart(ctx, {
     type: 'line',
@@ -16122,5 +16127,66 @@ let trafficChart = new Chart(ctx, {
             }]
         }
     }
-});
+})
+
+let dailyTrafficChart = new Chart(dtc, {
+    type: 'bar',
+    data: {
+        labels: ["S", "M", "T", "W", "T", "F", "S"],
+        datasets: [{
+            backgroundColor: "rgba(101, 106, 187, 1)",
+            data: ["50", "75", "150", "100", "200", "175", "75"]
+
+        }]
+    },
+    options: {
+        legend: {
+            display: false
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    max: 250,
+                    stepSize: 50
+                }
+            }]
+        }
+    }
+})
+
+let mobileUsersChart = new Chart(muc, {
+    type: 'doughnut',
+    data: {
+        labels: ["Phones", "Tablets", "Desktop", "Laptop", "Others"],
+        datasets: [{
+            backgroundColor: "rgba(101, 106, 187, 1)",
+            data: ["22", "30", "17", "29", "2"],
+            backgroundColor: [
+                "rgba(225, 74, 86,.8)",
+                "rgba(247, 125, 8,.8)",
+                "rgba(160, 185, 40,.8)",
+                "rgba(68, 33, 71,.8)",
+                "rgba(23, 152, 179,.8)"
+            ],
+            hoverBackgroundColor: [
+                "rgba(225, 74, 86, 1)",
+                "rgba(247, 125, 8, 1)",
+                "rgba(160, 185, 40, 1)",
+                "rgba(68, 33, 71, 1)",
+                "rgba(23, 152, 179, 1)"
+            ]
+
+        }]
+    },
+    options: {
+        legend: {
+            display: true,
+            position: "right",
+            labels: {
+                //fontSize: "10",
+                usePointStyle: true,
+            }
+        }
+    }
+})
 //# sourceMappingURL=app.js.map
