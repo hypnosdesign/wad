@@ -11,13 +11,13 @@ textarea
 
 
 input
-  float: right
   padding: .65em 1.35em
   color: #666
   font-size: 1.4em
   border: 1px solid border_grey
   border-radius: 6px
   max-width: 100%
+  width: 100%
 
 .box--message-user
   form
@@ -27,8 +27,14 @@ input
     @extend input
     background-color #f5f5f5
     margin-bottom: 1.6em
-    float: none
-    width: 100%
+  textarea
+    height 140px
+
+input#main-search
+  float right
+  max-width: 300px
+    
+    
   textarea
     height 130px
     padding: 1.1em 1.35em

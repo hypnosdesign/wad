@@ -19,14 +19,14 @@ body
     section.search
       h2 Dashboard
       .box-search
-        input(type="search", placeholder="Search")
+        input(type="search", placeholder="Search" id="main-search")
     #wrapper-sections
       section.box.box--traffic
         h4.f-left traffic
         .menu-traffic
           p.hourly Hourly
           p.daily Daily
-          p.weekly Weekly
+          p.weekly.active Weekly
           p.monthly Monthly
         .chart-container
           canvas(id="traffic-chart")
