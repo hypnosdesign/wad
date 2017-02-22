@@ -16081,6 +16081,22 @@
         }]
     }, {}, [7])(7)
 });
+// add and remove class to menu
+const menuTraffic = document.querySelectorAll('.menu-traffic p')
+
+function addRemoveClass(event) {
+    event.preventDefault()
+    menuTraffic.forEach((element) => element.classList.remove('active'))
+    this.classList.add('active')
+}
+menuTraffic.forEach(elements => elements.addEventListener('click', addRemoveClass))
+
+
+
+// Charts Deafault settings
+
+Chart.defaults.global.maintainAspectRatio = false
+
 //get Traffic line Chart canvas
 const ctx = document.getElementById('traffic-chart');
 // get Daily traffic bar chart canvas
@@ -16088,18 +16104,53 @@ const dtc = document.getElementById('daily-traffic-chart');
 // get Mobile Users pie Chart canvas
 const muc = document.getElementById('mobile-users-chart');
 
-let trafficChart = new Chart(ctx, {
+let hourly = [
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+    [40, 56, 89, 22, 30, 34, 56, 9, 56, 29, 33, 45, 61, 28, 34, 42, 37, 40, 65, 76, 77, 79, 52, 54],
+    {
+        max: 100,
+        min: 0,
+        stepSize: 20
+    }
+];
+let daily = [
+    ["S", "M", "T", "W", "T", "F", "S"],
+    ["50", "75", "150", "100", "200", "175", "75"],
+    {
+        max: 500,
+        min: 0,
+        stepSize: 100
+    }
+];
+let weekly = [
+    ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+    ["0", "500", "1000", "750", "1250", "1750", "1250", "1500", "1000", "1500", "2000", "1500", "2000"],
+    {
+        max: 2500,
+        min: 0,
+        stepSize: 500
+    }
+];
+let monthly = [
+    ["Jan", "Feb", "Mar", "Apr", "May", "Jul", "Aug", "Sep", "Oct", "Nov", "Dic"],
+    [2000, 4000, 3000, 2500, 3500, 2500, 3000, 2000, 5000, 8000, 8500, 7000],
+    {
+        max: 10000,
+        min: 0,
+        stepSize: 1500
+    }
+];
+
+var trafficChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+        labels: weekly[0],
         datasets: [{
             fill: true,
             lineTension: 0,
             backgroundColor: "rgba(226, 227, 246,.7)",
             borderColor: "rgba(101, 106, 187, 1)",
             borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
             borderJoinStyle: 'miter',
             pointBorderColor: "rgba(101, 106, 187, 1)",
             pointBackgroundColor: "#fff",
@@ -16110,7 +16161,7 @@ let trafficChart = new Chart(ctx, {
             pointHoverBorderWidth: 2,
             pointRadius: 5,
             pointHitRadius: 10,
-            data: ["0", "500", "1000", "750", "1250", "1750", "1250", "1500", "1000", "1500", "2000", "1500", "2000"]
+            data: weekly[1]
         }]
     },
     options: {
@@ -16119,15 +16170,51 @@ let trafficChart = new Chart(ctx, {
         },
         scales: {
             yAxes: [{
-                ticks: {
-                    max: 2500,
-                    min: 0,
-                    stepSize: 500
-                }
+                ticks: weekly[2]
             }]
         }
     }
 })
+const hourlyP = document.getElementsByClassName('hourly')[0];
+hourlyP.addEventListener('click', function() {
+    trafficChart.data.labels = hourly[0];
+    trafficChart.data.datasets[0].data = hourly[1];
+    trafficChart.options.scales.yAxes[0].ticks.max = 100
+    trafficChart.options.scales.yAxes[0].ticks.min = 0
+    trafficChart.options.scales.yAxes[0].ticks.stepSize = 20
+    trafficChart.update()
+})
+const dailyP = document.getElementsByClassName('daily')[0];
+dailyP.addEventListener('click', function() {
+    trafficChart.data.labels = daily[0];
+    trafficChart.data.datasets[0].data = daily[1];
+    trafficChart.options.scales.yAxes[0].ticks.max = 250
+    trafficChart.options.scales.yAxes[0].ticks.min = 0
+    trafficChart.options.scales.yAxes[0].ticks.stepSize = 100
+    trafficChart.update()
+})
+const weeklyP = document.getElementsByClassName('weekly')[0];
+console.log(weeklyP)
+weeklyP.addEventListener('click', () => {
+    trafficChart.data.labels = weekly[0];
+    trafficChart.data.datasets[0].data = weekly[1];
+    trafficChart.options.scales.yAxes[0].ticks.max = 2500
+    trafficChart.options.scales.yAxes[0].ticks.min = 0
+    trafficChart.options.scales.yAxes[0].ticks.stepSize = 500
+    trafficChart.update()
+});
+const monthlyP = document.getElementsByClassName('monthly')[0];
+console.log(monthlyP)
+monthlyP.addEventListener('click', () => {
+    trafficChart.data.labels = monthly[0];
+    trafficChart.data.datasets[0].data = monthly[1];
+    trafficChart.options.scales.yAxes[0].ticks.max = 10000
+    trafficChart.options.scales.yAxes[0].ticks.min = 0
+    trafficChart.options.scales.yAxes[0].ticks.stepSize = 1500
+    trafficChart.update()
+});
+
+
 
 let dailyTrafficChart = new Chart(dtc, {
     type: 'bar',
@@ -16153,6 +16240,8 @@ let dailyTrafficChart = new Chart(dtc, {
         }
     }
 })
+
+
 
 let mobileUsersChart = new Chart(muc, {
     type: 'doughnut',
@@ -16184,7 +16273,7 @@ let mobileUsersChart = new Chart(muc, {
             position: "right",
             labels: {
                 //fontSize: "10",
-                usePointStyle: true,
+                usePointStyle: true
             }
         }
     }
