@@ -1,4 +1,14 @@
-//reset forms elements
+/*************************
+
+ FORMS
+
+*************************/
+
+
+
+/*------------------------------------------ 
+  RESET
+------------------------------------------*/
 input,
 textarea
   border: none
@@ -10,35 +20,58 @@ textarea
     outline: 0
 
 
-input
+
+/*------------------------------------------ 
+  GLOBAL
+------------------------------------------*/
+input,
+textarea
   padding: .65em 1.35em
-  color: #666
+  color: lighten($color_text, 20%)
   font-size: 1.4em
-  border: 1px solid border_grey
+  border: 1px solid $color_border
   border-radius: 6px
   max-width: 100%
   width: 100%
 
+
+/*------------------------------------------ 
+  MAIN SEARCH
+------------------------------------------*/
+input#main-search
+  float right
+  max-width: 300px
+
+
+
+/*------------------------------------------ 
+  MESSAGE USER
+------------------------------------------*/
 .box--message-user
   form
     padding: 0 1.4em
   input,
   textarea
-    @extend input
     background-color #f5f5f5
     margin-bottom: 1.6em
   textarea
     height 140px
 
-input#main-search
-  float right
-  max-width: 300px
-    
-    
-  textarea
-    height 130px
-    padding: 1.1em 1.35em
 
-    
+/*------------------------------------------ 
+  SELECT TIMEZONE
+------------------------------------------*/
+#select-timezone
+  padding: .65em 1.35em
+  color: #666
+  font-size: 1.4em
+  border: 1px solid $color_base
+  background-color lighten($color_base, 80%)
+  border-radius: 6px
+  width: 100%
+  margin 1em auto
+  font-family: Nunito
+  font-size 2em
+  outline: none
 
 

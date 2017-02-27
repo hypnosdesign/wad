@@ -1,11 +1,68 @@
+/*************************
+
+ CONTAINERS
+
+*************************/
+
+
+
+/*------------------------------------------ 
+  WRAPPER
+------------------------------------------*/
 #wrapper
   display: flex
   flex-direction: column
-  //justify-content: space-between
-  //height: 100vh
-#wrapper-sections
-  //overflow-y: scroll
 
+
+
+/*------------------------------------------ 
+  SEARCH SECTION
+------------------------------------------*/
+section.search
+  display: flex
+  margin-bottom: 40px
+  h2
+    @extend h4
+    margin: 0 1em
+    align-self: center
+  .box-search
+    background-color #fbfbfb
+    flex: 1
+    padding: 1em
+    border-left: 1px solid $color_border
+    border-bottom: 1px solid $color_border
+
+
+
+/*------------------------------------------ 
+  CONTAINER GLOBAL
+------------------------------------------*/
+section.container
+  border-bottom: 1px solid $color_border
+  padding: 1em 0 3em
+  h4
+    font-size: 1.1em
+    text-transform: uppercase
+    font-weight: 800
+    letter-spacing: 1px
+    padding: 1.65em 0 1.65em 1em
+
+
+
+/*------------------------------------------ 
+  CHART CONTAINER GLOBAL
+------------------------------------------*/
+.chart-container
+  width 100%
+  max-width: 1024px
+  margin: 0 auto
+  padding: 0 5%
+
+
+
+/*------------------------------------------ 
+  TRAFFIC SECTION
+------------------------------------------*/
 .menu-traffic
   display: inline-block
   float: right
@@ -20,53 +77,30 @@
     cursor: pointer
     &.active,
     &:hover
-      background-color green
-      color: #fafafa
+      background-color $color_success
+      color: $color_body
       border-radius: 3px
-.f-left, .menu-traffic, .menu-traffic *
+.f-left, 
+.menu-traffic, 
+.menu-traffic *
   display: inline-block
 
 
 
-section.search
+/*------------------------------------------ 
+  SETTINGS SECTION
+------------------------------------------*/
+.settings-container
   display: flex
-  margin-bottom: 40px
-  h2
-    @extend h4
-    margin: 0 1em
-    align-self: center
-  .box-search
-    background-color #fbfbfb
-    flex: 1
-    padding: 1em
-    border-left: 1px solid border_grey
-    border-bottom: 1px solid border_grey
-
-section.box
-  //flex: 1 1 auto
-  border-bottom: 1px solid border_grey
-  h4
-    font-size: 1.1em
-    text-transform: uppercase
-    font-weight: 800
-    letter-spacing: 1px
-    padding: 1.65em 0 1.65em 1em
-
-.chart-container
-  width 100%
-  max-width: 1024px
-  height 200px
+  justify-content: space-between
+  align-items: center
+  padding: .5em 2em
+  max-width 500px
   margin: 0 auto
-  padding: 0 5%
-  padding-bottom: 5%
 
 .time-zone-container
-  padding: 1em
+  padding: 1em 0
+  margin: 0 auto
+  width 95%
   margin-bottom: 7em
-  input
-    float: none
-    margin-bottom: 1.2em
-    width 100%
-  button
-    width 48%
-    display: inline-block
+

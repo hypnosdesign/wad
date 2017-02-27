@@ -1,56 +1,62 @@
+/*************************
+
+ BOXES
+
+*************************/
+
+
+
+/*------------------------------------------ 
+  BOX SOCIAL
+------------------------------------------*/
 .social-box
   display: flex
   flex-direction: column
 
-  .social-box--facebook
-  .social-box--twitter
-  .social-box--google
-  .social-box--instagram
+  > *
     display: flex
     align-items: center
     margin: 1em 2em
     padding: 1.6em 2em
-    border: 1px solid border_grey
+    border: 1px solid $color_border
     border-radius: 4px
     background-color #fbfbfb
     .social-name
       font-size: 1.4em
       font-weight: 900
       text-transform: capitalize
-      color: lilla
+      color: $color_base
     .social-number
       font-size: 3em
       font-weight: 200
       color: #666
-
     .social-img
       padding: 1.6em
-      
-      background-color lilla
+      background-color $color_base
       border-radius: 100%
       width 60px
       height 60px
-
       img
         position: relative;
         top: 50%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
-
     .social-text
       margin-left: 1.8em
 
+/*------------------------------------------ 
+  NEW MEMBER - RECENT ACTIVITY
+------------------------------------------*/
 .box-new-member,
 .box-activity
   padding: 1.2em 2em 1.2em 0
   margin: 0 1.6em
-  border-bottom: 1px solid border_grey
+  border-bottom: 1px solid $color_border
   display: flex
   flex-direction: row
   align-items: center
   justify-content: flex-start
-  
   color: #555
   &:last-child
     border none

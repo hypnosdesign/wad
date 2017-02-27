@@ -1,3 +1,14 @@
+/*************************
+
+ NAVIGATION
+
+*************************/
+
+
+
+/*------------------------------------------ 
+  MAIN NAV
+------------------------------------------*/
 nav.main-nav
   display: flex
   align-items: center
@@ -12,7 +23,7 @@ nav.main-nav
       content ''
       width 5px
       height 5px
-      background-color color_success
+      background-color $color_success
       border-radius: 100%
       position: relative
       right: 2px
@@ -21,24 +32,29 @@ nav.main-nav
     display: flex
     align-items: center
     padding-left: 1.25em
-    border-left: 1px solid darken(lilla, 8%)
+    border-left: 1px solid darken($color_base, 8%)
     img
       height 30px
       width 30px
       border-radius: 100%
       margin-right: .65em
 
+
+
+/*------------------------------------------ 
+  FOOTER NAV
+------------------------------------------*/
 nav.footer-nav
     display: flex
     flex-direction: row
     align-items: center
     text-align: center
     justify-content: space-around
-    color: white
+    color: $color_body
   .controls
     padding: 1em
     flex: 1 1
     img
       width 30px
     &:hover
-      background-color darken(lilla, 8%)
+      background-color darken($color_base, 8%)

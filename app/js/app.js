@@ -16086,7 +16086,7 @@ const menuTraffic = document.querySelectorAll('.menu-traffic p')
 
 function addRemoveClass(event) {
     event.preventDefault()
-    menuTraffic.forEach((element) => element.classList.remove('active'))
+    menuTraffic.forEach(element => element.classList.remove('active'))
     this.classList.add('active')
 }
 menuTraffic.forEach(elements => elements.addEventListener('click', addRemoveClass))
