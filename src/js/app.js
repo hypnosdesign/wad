@@ -22,8 +22,7 @@ const muc = document.getElementById('mobile-users-chart');
 
 let hourly = [
   [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23],
-  [40,56,89,22,30,34,56,9,56,29,33,45,61,28,34,42,37,40,65,76,77,79,52,54],
-  { max: 100, min: 0, stepSize: 20 }
+  [40,56,89,22,30,34,56,9,56,29,33,45,61,28,34,42,37,40,65,76,77,79,52,54]
 ];
 let daily = [
   ["S","M","T","W","T","F","S"],
@@ -92,7 +91,6 @@ const dailyP = document.getElementsByClassName('daily')[0];
     trafficChart.update()
 })
 const weeklyP = document.getElementsByClassName('weekly')[0];
-console.log(weeklyP)
 weeklyP.addEventListener('click', () => {
 trafficChart.data.labels = weekly[0];
     trafficChart.data.datasets[0].data = weekly[1];
@@ -102,7 +100,6 @@ trafficChart.data.labels = weekly[0];
     trafficChart.update()
 });
 const monthlyP = document.getElementsByClassName('monthly')[0];
-console.log(monthlyP)
 monthlyP.addEventListener('click', () => {
 trafficChart.data.labels = monthly[0];
     trafficChart.data.datasets[0].data = monthly[1];
@@ -121,7 +118,10 @@ let dailyTrafficChart = new Chart(dtc, {
     datasets: [{
         backgroundColor: "rgba(101, 106, 187, 1)",
         data: ["50", "75", "150", "100", "200", "175","75"]
-
+    },
+    {
+      backgroundColor: "rgba(101, 206, 187, 1)",
+      data: ["90", "40", "100", "110", "180", "150","80"]
     }]
   },
   options: {
@@ -174,3 +174,66 @@ let mobileUsersChart = new Chart(muc, {
     }
   }
 })
+
+/*------------------------------------------ 
+  LOCAL STORAGE
+------------------------------------------*/
+const formSettings = document.getElementById('form-settings');
+const emailNotification = document.getElementById('switch_1');
+const profilePublic = document.getElementById('switch_2');
+const timeZone = document.getElementById('select-timezone');
+
+
+formSettings.addEventListener('submit', event => {
+  const sets = [
+    ['setEmail', emailNotification.checked],
+    ['setProfile', profilePublic.checked],
+    ['setTimezone', timeZone.value]
+  ];
+
+  event.preventDefault();
+    for (let i = 0; i < sets.length; i++) {
+      var setKey = sets[i][0];
+      var setValue = sets[i][1];
+      var local = localStorage.setItem(setKey, setValue)
+    }
+})
+
+if(localStorage.setEmail === 'false'){
+      emailNotification.checked = false
+    } else {
+      emailNotification.checked = true
+    }
+if(localStorage.setProfile === 'false'){
+      profilePublic.checked = false
+    } else {
+      profilePublic.checked = true
+    }
+
+timeZone.value = localStorage.setTimezone
+
+addEventListener(document, "touchstart", function(e) {
+    console.log(e.defaultPrevented);  // will be false
+    e.preventDefault();   // does nothing since the listener is passive
+    console.log(e.defaultPrevented);  // still false
+  }, Modernizr.passiveeventlisteners ? {passive: true} : false);
+
+
+
+
+/*------------------------------------------ 
+  SEARCH FOR USER
+------------------------------------------*/
+const messageObj = {};
+messageObj.name = [];
+messageObj.txt = [];
+
+
+
+/*------------------------------------------ 
+  SEARCH FOR USER VALIDATION
+------------------------------------------*/
+const formSearchUser = document.getElementById('searchForUserForm');
+const inputSearchUser = document.getElementById('inputForUserForm');
+const textAreaUserMessage = document.getElementById('textAreaForUserForm');
+

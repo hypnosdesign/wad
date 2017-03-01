@@ -12,6 +12,12 @@
 .social-box
   display: flex
   flex-direction: column
+  +mq(tablet)
+    flex-direction: row
+    flex-wrap wrap
+    align-items: flex-start
+    > *
+      flex: 1 auto
 
   > *
     display: flex
@@ -82,7 +88,7 @@ p.name
 p.email,
 p.time
   font-size: 1.3em
-  color: lilla
+  color: $color_base
 p.time
   color: #555
 p.activity
@@ -90,8 +96,8 @@ p.activity
 p.arrow
   width 10px
   height 10px
-  border-left: 1px solid lilla
-  border-bottom: 1px solid lilla
+  border-left: 1px solid $color_base
+  border-bottom: 1px solid $color_base
   background-color transparent
   transform: rotate(230deg)
   padding: 6px

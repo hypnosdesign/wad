@@ -2,29 +2,33 @@
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, minimum-scale=1.0")
     title Web App Dashboard
     link(rel="stylesheet", href="css/app.css")
   body
+    header.main-header
+      h1.main-title <b>Your</b>App<sup>TM</sup>
+      nav.main-nav
+        .notify
+          img(src="img/icons/icon-bell.svg", alt="Notify Icon")
+          nav
+            p Notify One
+            p Notify Two
+        .user-menu
+          img(src="img/user.gif", alt="User Photo")
+          p Mattia Piano
     #wrapper
-      header.main-header
-        h1.main-title <b>Your</b>App<sup>TM</sup>
-        nav.main-nav
-          .notify
-            img(src="img/icons/icon-bell.svg", alt="Notify Icon")
-          .user-menu
-            img(src="img/user.gif", alt="User Photo")
-            p Mattia Piano
-      
-      section.search
-        h2 Dashboard
-        .box-search
-          input(type="search", placeholder="Search" id="main-search")
-      input(type="checkbox" id="dialog-box-alert")
-      #alert-message
-          span.message <strong>Alert!</strong>  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          label.closeBtn(for="dialog-box-alert") X
       #wrapper-sections
+        section.search
+          h2 Dashboard
+          .box-search
+            input(type="search", placeholder="Search" id="main-search")
+        #dialog-box    
+          input(type="checkbox" id="dialog-box-alert")
+          #alert-message
+            span.message <strong>Alert!</strong>  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            label.closeBtn(for="dialog-box-alert") X
+
         section.container.box--traffic
           h4.f-left traffic
           .menu-traffic
@@ -34,14 +38,15 @@ html(lang="en")
             p.monthly Monthly
           .chart-container
             canvas(id="traffic-chart")
-        section.container.box--daily-traffic
-          h4 daily traffic
-          .chart-container
-            canvas(id="daily-traffic-chart")
-        section.container.box--mobile-users
-          h4 mobile users
-          .chart-container
-            canvas(id="mobile-users-chart")
+        div.flex
+          section.container.box--daily-traffic
+            h4 daily traffic
+            .chart-container
+              canvas(id="daily-traffic-chart")
+          section.container.box--mobile-users
+            h4 mobile users
+            .chart-container
+              canvas(id="mobile-users-chart")
         section.container.box--social
           h4 social stats
           .social-box
@@ -69,115 +74,123 @@ html(lang="en")
               .social-text
                 p.social-name instagram
                 p.social-number 6,913
-        section.container.box--new-members
-          h4 new members
-          .box-new-member
-            img(src="img/members/victoria.jpg", alt="Photo member")
-            .box-members-text
-              p.name Victoria Chambers
-              p.email victoria.chambers80@example.com
-            p.date 10/15/15
-          .box-new-member
-            img(src="img/members/dale.jpg", alt="Photo member")
-            .box-members-text
-              p.name Dale Byrd
-              p.email dale.bird52@example.com
-            p.date 10/15/15
-          .box-new-member
-            img(src="img/members/dawn.jpg", alt="Photo member")
-            .box-members-text
-              p.name Dawn Wood
-              p.email dawn.wood16@example.com
-            p.date 10/15/15
-          .box-new-member
-            img(src="img/members/dan.jpg", alt="Photo member")
-            .box-members-text
-              p.name Dan Oliver
-              p.email dan.oliver82@example.com
-            p.date 10/15/15
-        section.container.box--recent-activity
-          h4 recent activity
-          .box-activity
-            img(src="img/members/victoria.jpg", alt="Photo member")
-            .box-members-activity
-              p.activity Victoria Chambers commented on YourApp's SEO Tips
-              p.time 4 hours ago
-            p.arrow
-          .box-activity
-            img(src="img/members/dale.jpg", alt="Photo member")
-            .box-members-activity
-              p.activity Dale Byrd
-              p.time 5 hours ago
-            p.arrow
-          .box-activity
-            img(src="img/members/dawn.jpg", alt="Photo member")
-            .box-members-activity
-              p.activity Dawn Wood
-              p.time 5 hours ago
-            p.arrow
-          .box-activity
-            img(src="img/members/dan.jpg", alt="Photo member")
-            .box-members-activity
-              p.activity Dan Oliver
-              p.time 1 day ago
-            p.arrow
-        section.container.box--message-user
-          h4 message user
-          form(action="")
-            input(type="search" placeholder="Search for User")
-            textarea(placeholder="Message for User")
-            button(type="submit") send
-        section.container.box--settings
-          h4 settings
-          .settings-container
-            p.send-email Send Email Notification
-            .switch-container
-              input(class="switch-checkbox" type="checkbox" id="switch_1")
-              label(class="switch" for="switch_1")
-                span.point
-              
-          .settings-container
-            p.set-profile Set profile to pubblic
-            .switch-container
-              input(class="switch-checkbox" type="checkbox" id="switch_2")
-              label(class="switch" for="switch_2")
-                span.point
-          .time-zone-container
-            select#select-timezone(name='timezone')
-              option(value='default' selected="selected") Select Time Zone
-              option(value='-12.0') (GMT -12:00) Eniwetok, Kwajalein
-              option(value='-11.0') (GMT -11:00) Midway Island, Samoa
-              option(value='-10.0') (GMT -10:00) Hawaii
-              option(value='-9.0') (GMT -9:00) Alaska
-              option(value='-8.0') (GMT -8:00) Pacific Time (US & Canada)
-              option(value='-7.0') (GMT -7:00) Mountain Time (US & Canada)
-              option(value='-6.0') (GMT -6:00) Central Time (US & Canada), Mexico City
-              option(value='-5.0') (GMT -5:00) Eastern Time (US & Canada), Bogota, Lima
-              option(value='-4.0') (GMT -4:00) Atlantic Time (Canada), Caracas, La Paz
-              option(value='-3.5') (GMT -3:30) Newfoundland
-              option(value='-3.0') (GMT -3:00) Brazil, Buenos Aires, Georgetown
-              option(value='-2.0') (GMT -2:00) Mid-Atlantic
-              option(value='-1.0') (GMT -1:00 hour) Azores, Cape Verde Islands
-              option(value='0.0') (GMT) Western Europe Time, London, Lisbon, Casablanca
-              option(value='1.0') (GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris
-              option(value='2.0') (GMT +2:00) Kaliningrad, South Africa
-              option(value='3.0') (GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg
-              option(value='3.5') (GMT +3:30) Tehran
-              option(value='4.0') (GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi
-              option(value='4.5') (GMT +4:30) Kabul
-              option(value='5.0') (GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent
-              option(value='5.5') (GMT +5:30) Bombay, Calcutta, Madras, New Delhi
-              option(value='5.75') (GMT +5:45) Kathmandu
-              option(value='6.0') (GMT +6:00) Almaty, Dhaka, Colombo
-              option(value='7.0') (GMT +7:00) Bangkok, Hanoi, Jakarta
-              option(value='8.0') (GMT +8:00) Beijing, Perth, Singapore, Hong Kong
-              option(value='9.0') (GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk
-              option(value='9.5') (GMT +9:30) Adelaide, Darwin
-              option(value='10.0') (GMT +10:00) Eastern Australia, Guam, Vladivostok
-              option(value='11.0') (GMT +11:00) Magadan, Solomon Islands, New Caledonia
-              option(value='12.0') (GMT +12:00) Auckland, Wellington, Fiji, Kamchatka
-            button save
-            button.cancell cancell
+            .social-box--youtube
+              .social-img
+                img(src="img/icons/icon-youtube.svg", alt="icon youtube")
+              .social-text
+                p.social-name youtube
+                p.social-number 3,004
+        div.flex
+          section.container.box--new-members
+            h4 new members
+            .box-new-member
+              img(src="img/members/victoria.jpg", alt="Photo member")
+              .box-members-text
+                p.name Victoria Chambers
+                p.email victoria.chambers80@example.com
+              p.date 10/15/15
+            .box-new-member
+              img(src="img/members/dale.jpg", alt="Photo member")
+              .box-members-text
+                p.name Dale Byrd
+                p.email dale.bird52@example.com
+              p.date 10/15/15
+            .box-new-member
+              img(src="img/members/dawn.jpg", alt="Photo member")
+              .box-members-text
+                p.name Dawn Wood
+                p.email dawn.wood16@example.com
+              p.date 10/15/15
+            .box-new-member
+              img(src="img/members/dan.jpg", alt="Photo member")
+              .box-members-text
+                p.name Dan Oliver
+                p.email dan.oliver82@example.com
+              p.date 10/15/15
+          section.container.box--recent-activity
+            h4 recent activity
+            .box-activity
+              img(src="img/members/victoria.jpg", alt="Photo member")
+              .box-members-activity
+                p.activity Victoria Chambers commented on YourApp's SEO Tips
+                p.time 4 hours ago
+              p.arrow
+            .box-activity
+              img(src="img/members/dale.jpg", alt="Photo member")
+              .box-members-activity
+                p.activity Dale Byrd
+                p.time 5 hours ago
+              p.arrow
+            .box-activity
+              img(src="img/members/dawn.jpg", alt="Photo member")
+              .box-members-activity
+                p.activity Dawn Wood
+                p.time 5 hours ago
+              p.arrow
+            .box-activity
+              img(src="img/members/dan.jpg", alt="Photo member")
+              .box-members-activity
+                p.activity Dan Oliver
+                p.time 1 day ago
+              p.arrow
+          section.container.box--message-user
+            h4 message user
+            form.searchForUser
+              input(type="search" placeholder="Search for User")
+              textarea(placeholder="Message for User")
+              button(type="submit") send
+          section.container.box--settings
+            h4 settings
+            form#form-settings
+              .settings-container
+                p.send-email Send Email Notification
+                .switch-container
+                  input(class="switch-checkbox" type="checkbox" id="switch_1")
+                  label(class="switch" for="switch_1")
+                    span.point
+                  
+              .settings-container
+                p.set-profile Set profile to pubblic
+                .switch-container
+                  input(class="switch-checkbox" type="checkbox" id="switch_2")
+                  label(class="switch" for="switch_2")
+                    span.point
+              .time-zone-container
+                select#select-timezone(name='timezone')
+                  option(value='default' selected="selected") Select Time Zone
+                  option(value='-12.0') (GMT -12:00) Eniwetok, Kwajalein
+                  option(value='-11.0') (GMT -11:00) Midway Island, Samoa
+                  option(value='-10.0') (GMT -10:00) Hawaii
+                  option(value='-9.0') (GMT -9:00) Alaska
+                  option(value='-8.0') (GMT -8:00) Pacific Time (US & Canada)
+                  option(value='-7.0') (GMT -7:00) Mountain Time (US & Canada)
+                  option(value='-6.0') (GMT -6:00) Central Time (US & Canada), Mexico City
+                  option(value='-5.0') (GMT -5:00) Eastern Time (US & Canada), Bogota, Lima
+                  option(value='-4.0') (GMT -4:00) Atlantic Time (Canada), Caracas, La Paz
+                  option(value='-3.5') (GMT -3:30) Newfoundland
+                  option(value='-3.0') (GMT -3:00) Brazil, Buenos Aires, Georgetown
+                  option(value='-2.0') (GMT -2:00) Mid-Atlantic
+                  option(value='-1.0') (GMT -1:00 hour) Azores, Cape Verde Islands
+                  option(value='0.0') (GMT) Western Europe Time, London, Lisbon, Casablanca
+                  option(value='1.0') (GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris
+                  option(value='2.0') (GMT +2:00) Kaliningrad, South Africa
+                  option(value='3.0') (GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg
+                  option(value='3.5') (GMT +3:30) Tehran
+                  option(value='4.0') (GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi
+                  option(value='4.5') (GMT +4:30) Kabul
+                  option(value='5.0') (GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent
+                  option(value='5.5') (GMT +5:30) Bombay, Calcutta, Madras, New Delhi
+                  option(value='5.75') (GMT +5:45) Kathmandu
+                  option(value='6.0') (GMT +6:00) Almaty, Dhaka, Colombo
+                  option(value='7.0') (GMT +7:00) Bangkok, Hanoi, Jakarta
+                  option(value='8.0') (GMT +8:00) Beijing, Perth, Singapore, Hong Kong
+                  option(value='9.0') (GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk
+                  option(value='9.5') (GMT +9:30) Adelaide, Darwin
+                  option(value='10.0') (GMT +10:00) Eastern Australia, Guam, Vladivostok
+                  option(value='11.0') (GMT +11:00) Magadan, Solomon Islands, New Caledonia
+                  option(value='12.0') (GMT +12:00) Auckland, Wellington, Fiji, Kamchatka
+              button(type="submit") save
+              button.cancell(type="reset") cancell
       footer
         nav.footer-nav
           .controls.controls--dashboard

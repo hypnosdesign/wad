@@ -40,21 +40,71 @@ nav.main-nav
       margin-right: .65em
 
 
+/*------------------------------------------ 
+  NOTIFY NAV
+------------------------------------------*/
+.notify
+  nav
+    display: none
+    position: absolute
+    background-color $white
+    color: $black
+    top: 50px
+    border: 1px solid $color_border
+    border-radius: 0px 5px 5px
+    &:before
+      content: '';
+      display: block;
+      position: absolute;
+      top: -17px;
+      left: 0px
+      width: 0;
+      height: 0;
+      border-color: transparent transparent $white transparent
+      border-style: solid;
+      border-width: 8px;
+      z-index: 1
+    p
+      border-bottom: 1px solid $color_border
+      padding: .2em .6em
+      &:last-child
+        border: none
+      &:hover
+        background-color $color_success
+        color: $white
+.notify:hover > nav
+  display: block
+
+
+
 
 /*------------------------------------------ 
   FOOTER NAV
 ------------------------------------------*/
 nav.footer-nav
-    display: flex
-    flex-direction: row
-    align-items: center
-    text-align: center
-    justify-content: space-around
-    color: $color_body
+  display: flex
+  flex-direction: row
+  align-items: center
+  text-align: center
+  justify-content: space-around
+  color: $color_body
+  +mq(tablet)
+    flex-direction: column
+    margin-top: 2em
   .controls
-    padding: 1em
+    padding: 1.2em 1em
+    width: 100%
+    border-top: 4px solid transparent
+    border-right: 4px solid transparent
+    border-bottom: 4px solid transparent
+    border-left: 4px solid transparent
     flex: 1 1
     img
       width 30px
     &:hover
       background-color darken($color_base, 8%)
+      border-bottom: 4px solid $color_success
+      +mq(tablet)
+        border-bottom: 4px solid transparent
+        border-left: 4px solid $color_success
+
