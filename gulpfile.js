@@ -92,8 +92,8 @@ gulp.task('stylus', ()=> {
 
 // JS
 
-gulp.task('js', ()=> {
-  return gulp.src('./src/js/app.js')
+gulp.task('js', ['js:copy'],()=> {
+  return gulp.src(dir.src.js + '/app.js')
     .pipe(plumber())
     .pipe(maps.init({loadMaps: true}))
     .pipe( when(argv.production,
@@ -102,6 +102,13 @@ gulp.task('js', ()=> {
       )
     )
     .pipe(maps.write('.'))
+    .pipe(gulp.dest(dir.app.js))
+      .pipe(browserSync.reload({stream: true}))
+})
+
+// JS libs copy
+gulp.task('js:copy', () =>{
+  return gulp.src(dir.src.js + '/libs/**/*.js')
     .pipe(gulp.dest(dir.app.js))
       .pipe(browserSync.reload({stream: true}))
 })
@@ -119,7 +126,6 @@ gulp.task('img-min', () => {
 // delete maps
 
 gulp.task('clean-maps', ['html', 'stylus', 'js','img-min'] ,()=>{
-
     return del([
       dir.app.base + '/**/*.map',
       !dir.app.base + '/**'
