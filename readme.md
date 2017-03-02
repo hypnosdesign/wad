@@ -1,3 +1,20 @@
+## Install Packages
+
+After cloning the project to your computer run the following command in your terminal to install all required node packages.
+
+    sudo npm install
+
+or if you prefer using Yarn
+
+    sudo yarn
+
+## Running App
+This build system can be run in two modes: development and production.  Use development when you are developing your app.  In this mode your JS will not be minified, CSS will contain sourcemaps to the original Stylus files.  When you are ready to deploy you can start the app in production mode which will uglify your JS, and turn off sourcemaps for both JS and CSS.
+
+    gulp  (starts app in development mode)  
+    gulp --production (starts app in production mode)
+
+________________________
 # Project Instructions
 
 To complete this project, follow the instructions below. If you get stuck, ask a question in the community.
