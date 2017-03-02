@@ -232,21 +232,17 @@ const textAreaUserMessage = document.getElementById('textAreaForUserForm');
   SEARCH FOR USER
 ------------------------------------------*/
 const userName = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver']
+
 function findUser(type, userName){
   return userName.filter(user => {
     const regex = new RegExp(type, 'gi');
     return user.match(regex)
   } )
 }
+
 function displayUser(){
   const matches = findUser(this.value, userName);
   let html = matches.map(user => `<li>@${user}</li>`).join('')
-  /*function listOfuser(){
-    let list = `
-    <li>@${matches}</li>
-    `
-    return list
-  }*/
   document.querySelector("#result ul").innerHTML = html
 }
 
