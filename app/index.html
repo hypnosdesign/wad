@@ -166,10 +166,21 @@
           </section>
           <section class="container box--message-user">
             <h4>message user</h4>
-            <form class="searchForUser">
-              <input type="search" placeholder="Search for User"/>
-              <textarea placeholder="Message for User"></textarea>
+            <form class="searchForUser" id="searchForUserForm">
+              <div id="result">
+                <input id="inputForUserForm" type="search" placeholder="Search for User"/>
+                <ul>
+                  <li></li>
+                </ul>
+              </div>
+              <textarea id="textAreaForUserForm" placeholder="Message for User"></textarea>
               <button type="submit">send</button>
+              <div class="error">
+                <p>errore</p>
+              </div>
+              <div class="success">
+                <p>send it</p>
+              </div>
             </form>
           </section>
           <section class="container box--settings">

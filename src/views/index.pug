@@ -135,10 +135,18 @@ html(lang="en")
               p.arrow
           section.container.box--message-user
             h4 message user
-            form.searchForUser
-              input(type="search" placeholder="Search for User")
-              textarea(placeholder="Message for User")
+            form#searchForUserForm.searchForUser
+              #result
+                input#inputForUserForm(type="search" placeholder="Search for User")
+                ul
+                  li
+              
+              textarea#textAreaForUserForm(placeholder="Message for User")
               button(type="submit") send
+              .error
+                p errore
+              .success
+                p send it
           section.container.box--settings
             h4 settings
             form#form-settings

@@ -6,9 +6,11 @@ const gulp        = require('gulp'),
       stylus      = require('gulp-stylus'),
       beautify    = require('gulp-beautify'),
       uglify      = require('gulp-uglify'),
+      cssnano     = require('gulp-cssnano'),
       plumber     = require('gulp-plumber'),
       pug         = require('gulp-pug'),
       prefix      = require('gulp-autoprefixer'),
+      gutil       = require('gulp-util'),
       browserSync = require('browser-sync').create(),
       reload      = browserSync.reload,
 
@@ -81,10 +83,12 @@ gulp.task('stylus', ()=> {
     .pipe( when(argv.production,
       stylus({lineos: false, compress: true}),
       stylus({linenos: true})
-      )
+      ).on('error', gutil.log)
     )
     .pipe(prefix())
+    .pipe( when(argv.production, cssnano() ))
     .pipe(maps.write('.'))
+    .pipe(plumber.stop())
     .pipe(gulp.dest(dir.app.css))
       .pipe(browserSync.reload({stream: true}))
 })
@@ -93,15 +97,15 @@ gulp.task('stylus', ()=> {
 
 gulp.task('js', ()=> {
   return gulp.src([
-    './src/js/libs/Chart.bundle.js',
+    './src/js/libs/Chart.min.js',
     './src/js/app.js'
     ])
     .pipe(plumber())
     .pipe(maps.init({loadMaps: true}))
     .pipe(concat('app.js'))
     .pipe( when(argv.production,
-      uglify(),
-      beautify()
+      uglify()
+      //,beautify()
       )
     )
     .pipe(maps.write('.'))

@@ -212,28 +212,78 @@ if(localStorage.setProfile === 'false'){
 
 timeZone.value = localStorage.setTimezone
 
-addEventListener(document, "touchstart", function(e) {
+/*addEventListener(document, "touchstart", function(e) {
     console.log(e.defaultPrevented);  // will be false
     e.preventDefault();   // does nothing since the listener is passive
     console.log(e.defaultPrevented);  // still false
-  }, Modernizr.passiveeventlisteners ? {passive: true} : false);
-
-
-
-
-/*------------------------------------------ 
-  SEARCH FOR USER
-------------------------------------------*/
-const messageObj = {};
-messageObj.name = [];
-messageObj.txt = [];
-
+  }, Modernizr.passiveeventlisteners ? {passive: true} : false);*/
 
 
 /*------------------------------------------ 
   SEARCH FOR USER VALIDATION
 ------------------------------------------*/
+
 const formSearchUser = document.getElementById('searchForUserForm');
 const inputSearchUser = document.getElementById('inputForUserForm');
 const textAreaUserMessage = document.getElementById('textAreaForUserForm');
 
+
+/*------------------------------------------ 
+  SEARCH FOR USER
+------------------------------------------*/
+const userName = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver']
+function findUser(type, userName){
+  return userName.filter(user => {
+    const regex = new RegExp(type, 'gi');
+    return user.match(regex)
+  } )
+}
+function displayUser(){
+  const matches = findUser(this.value, userName);
+  let html = matches.map(user => `<li>@${user}</li>`).join('')
+  /*function listOfuser(){
+    let list = `
+    <li>@${matches}</li>
+    `
+    return list
+  }*/
+  document.querySelector("#result ul").innerHTML = html
+}
+
+inputSearchUser.addEventListener('keyup', displayUser)
+
+/*------------------------------------------ 
+  FLASH MESSAGES
+------------------------------------------*/
+const sendBtn = formSearchUser.getElementsByTagName('button');
+sendBtn[0].addEventListener('click', poptip,false)
+
+function poptip(event){
+  event.preventDefault();
+  if(inputSearchUser.value == '' || textAreaUserMessage.value == ''){
+    formSearchUser.querySelector('.error').style.visibility = 'visible'
+    formSearchUser.querySelector('.error').style.opacity = '1'
+    formSearchUser.querySelector('.error').style.transform = 'translateY(50%)'
+    formSearchUser.querySelector('.error').style.transition = 'all .3s'
+    setTimeout(()=>{
+      formSearchUser.querySelector('.error').style.visibility = 'hidden'
+      formSearchUser.querySelector('.error').style.opacity = '0'
+      formSearchUser.querySelector('.error').style.transform = 'translateY(300%)'
+      formSearchUser.querySelector('.error').style.transition = 'all .3s'
+    }, 1500)
+  } else {
+    formSearchUser.querySelector('.success').style.visibility = 'visible'
+    formSearchUser.querySelector('.success').style.opacity = '1'
+    formSearchUser.querySelector('.success').style.transform = 'translateY(50%)'
+    formSearchUser.querySelector('.success').style.transition = 'all .3s'
+    formSearchUser.querySelector('.success').style.backgroundColor = 'rgba(green, .6)'
+    setTimeout(()=>{
+      formSearchUser.querySelector('.success').style.visibility = 'hidden'
+      formSearchUser.querySelector('.success').style.opacity = '0'
+      formSearchUser.querySelector('.success').style.transform = 'translateY(300%)'
+      formSearchUser.querySelector('.success').style.transition = 'all .3s'
+    }, 1500)
+
+  }
+  console.log('ciao')
+}
