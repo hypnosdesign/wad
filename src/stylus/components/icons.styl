@@ -14,3 +14,27 @@
   &:hover
     background-color darken($color_base, 8%)
     cursor: pointer
+
+.box-search 
+  position: relative
+  span
+    font-size: 4em; /* This controls the size. */
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    border: 0.1em solid $color_border;
+    position: absolute;
+    border-radius: 0.35em;
+    right:30px
+    top: 20px
+    &:before
+      content: "";
+      display: inline-block;
+      position: absolute;
+      right: -0.15em;
+      bottom: -0.1em;
+      border-width: 0;
+      background: $color_border;
+      width: 0.20em;
+      height: 0.08em;
+      transform: rotate(45deg);

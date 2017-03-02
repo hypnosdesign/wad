@@ -72,6 +72,7 @@ var trafficChart = new Chart(ctx, {
     }
   }
 })
+
 const hourlyP = document.getElementsByClassName('hourly')[0];
     hourlyP.addEventListener('click', function(){
     trafficChart.data.labels = hourly[0];
@@ -212,11 +213,6 @@ if(localStorage.setProfile === 'false'){
 
 timeZone.value = localStorage.setTimezone
 
-/*addEventListener(document, "touchstart", function(e) {
-    console.log(e.defaultPrevented);  // will be false
-    e.preventDefault();   // does nothing since the listener is passive
-    console.log(e.defaultPrevented);  // still false
-  }, Modernizr.passiveeventlisteners ? {passive: true} : false);*/
 
 
 /*------------------------------------------ 
@@ -242,8 +238,23 @@ function findUser(type, userName){
 
 function displayUser(){
   const matches = findUser(this.value, userName);
-  let html = matches.map(user => `<li>@${user}</li>`).join('')
-  document.querySelector("#result ul").innerHTML = html
+  let result = document.querySelector("#result")
+  html = '<ul>'
+  html += matches.map(user => `<li><b>@</b>${user}</li>`).join('')
+  html += '</ul>'
+  result.innerHTML = html
+  result.querySelectorAll("li")
+    .forEach((user)=>{ user.addEventListener('click',
+      () => {
+        inputSearchUser.value = user.textContent
+        result.innerHTML = ''
+      }) 
+    })
+    if(inputSearchUser.value == '' || matches == ''){
+      result.style.visibility = 'hidden'
+    } else {
+      result.style.visibility = 'visible'
+    }
 }
 
 inputSearchUser.addEventListener('keyup', displayUser)
@@ -264,9 +275,9 @@ function poptip(event){
     setTimeout(()=>{
       formSearchUser.querySelector('.error').style.visibility = 'hidden'
       formSearchUser.querySelector('.error').style.opacity = '0'
-      formSearchUser.querySelector('.error').style.transform = 'translateY(300%)'
-      formSearchUser.querySelector('.error').style.transition = 'all .3s'
-    }, 1500)
+      formSearchUser.querySelector('.error').style.transform = 'translateY(-300%)'
+      formSearchUser.querySelector('.error').style.transition = 'all .5s'
+    }, 1800)
   } else {
     formSearchUser.querySelector('.success').style.visibility = 'visible'
     formSearchUser.querySelector('.success').style.opacity = '1'
@@ -277,9 +288,24 @@ function poptip(event){
       formSearchUser.querySelector('.success').style.visibility = 'hidden'
       formSearchUser.querySelector('.success').style.opacity = '0'
       formSearchUser.querySelector('.success').style.transform = 'translateY(300%)'
-      formSearchUser.querySelector('.success').style.transition = 'all .3s'
-    }, 1500)
+      formSearchUser.querySelector('.success').style.transition = 'all .5s'
+    }, 1800)
 
   }
-  console.log('ciao')
 }
+
+
+/*------------------------------------------ 
+  NOTIFY SHOW/HIDE
+------------------------------------------*/
+const notify = document.querySelector('.notify')
+const notifyItems = document.querySelector('.notify-items')
+notify.addEventListener('click', () => {
+  notifyItems.classList.toggle('visible')
+})
+
+notifyItems.addEventListener('mouseleave', () => {
+  if (notifyItems.classList.contains('visible')){
+    notifyItems.classList.remove('visible')
+  }
+})

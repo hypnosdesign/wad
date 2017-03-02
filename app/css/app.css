@@ -1,5 +1,5 @@
 
-/* line 297 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/app.styl */
+/* line 14 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/app.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/node_modules/stylus/lib/functions/index.styl */
 
@@ -15,36 +15,36 @@
   REQUIRE
 ------------------------------------------*/
 
-/* line 3 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/node_modules/stylus/lib/functions/index.styl */
+/* line 297 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/node_modules/stylus/lib/functions/index.styl */
 
-/* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/index.styl */
+/* line 3 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/index.styl */
 
-/* line 30 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/index.styl */
+/* line 3 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/index.styl */
 
-/* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/vars.styl */
+/* line 30 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/vars.styl */
 
-/* line 2 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/vars.styl */
+/* line 30 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/vars.styl */
 
-/* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/palettes/index.styl */
+/* line 2 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/palettes/index.styl */
 
-/* line 328 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/palettes/index.styl */
+/* line 2 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/palettes/index.styl */
 
 /* line 18 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/palettes/material-ui-colors.styl */
 
-/* line 94 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/palettes/material-ui-colors.styl */
+/* line 328 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/palettes/material-ui-colors.styl */
 
 /* line 8 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/palettes/social-media-colors.styl */
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,400,800");
 
-/* line 31 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/palettes/social-media-colors.styl */
+/* line 94 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/palettes/social-media-colors.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/mixin.styl */
 
-/* line 22 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/mixin.styl */
+/* line 31 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/configs/mixin.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/index.styl */
 
-/* line 48 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/index.styl */
+/* line 22 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/index.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/reset.styl */
 
@@ -187,7 +187,7 @@ table {
   border-spacing: 0;
 }
 
-/* line 27 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/reset.styl */
+/* line 48 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/reset.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/base.styl */
 
@@ -219,7 +219,7 @@ hr {
   padding: 0;
 }
 
-/* line 44 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/base.styl */
+/* line 27 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/base.styl */
 
 /* line 27 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/typo.styl */
 
@@ -303,7 +303,7 @@ footer p {
   margin-top: 8px;
 }
 
-/* line 16 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/typo.styl */
+/* line 44 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/typo.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/header.styl */
 
@@ -324,7 +324,7 @@ header.main-header {
   color: #fff;
 }
 
-/* line 128 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/header.styl */
+/* line 16 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/header.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/containers.styl */
 
@@ -505,7 +505,7 @@ section.container h4 {
   width: 95%;
 }
 
-/* line 109 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/containers.styl */
+/* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/containers.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
 
@@ -566,57 +566,47 @@ nav.main-nav .user-menu img {
   margin-right: 0.65em;
 }
 
-/* line 46 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
-
 /* line 47 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
-.notify nav {
+nav.notify-items {
   display: none;
   position: absolute;
   background-color: #fefefe;
   color: #0e0e0e;
   top: 50px;
+  right: 70px;
   border: 1px solid #e6e6e6;
   border-radius: 0px 5px 5px;
+  z-index: 5;
 }
 
-/* line 55 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
-.notify nav:before {
-  content: '';
+/* line 57 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
+nav.notify-items.visible {
   display: block;
-  position: absolute;
-  top: -17px;
-  left: 0px;
-  width: 0;
-  height: 0;
-  border-color: transparent transparent #fefefe transparent;
-  border-style: solid;
-  border-width: 8px;
-  z-index: 1;
 }
 
-/* line 67 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
-.notify nav p {
+/* line 59 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
+nav.notify-items p {
   border-bottom: 1px solid #e6e6e6;
   padding: 0.2em 0.6em;
 }
 
-/* line 70 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
-.notify nav p:last-child {
+/* line 62 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
+nav.notify-items p:last-child {
   border: none;
 }
 
-/* line 72 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
-.notify nav p:hover {
+/* line 64 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
+nav.notify-items p:hover {
   background-color: #81c98f;
   color: #fefefe;
 }
 
-/* line 75 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
+/* line 67 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
 .notify:hover > nav {
   display: block;
 }
 
-/* line 84 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
+/* line 76 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
 nav.footer-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -645,7 +635,7 @@ nav.footer-nav {
   }
 }
 
-/* line 94 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
+/* line 86 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
 nav.footer-nav .controls {
   padding: 1.2em 1em;
   width: 100%;
@@ -658,12 +648,12 @@ nav.footer-nav .controls {
           flex: 1 1;
 }
 
-/* line 102 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
+/* line 94 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
 nav.footer-nav .controls img {
   width: 30px;
 }
 
-/* line 104 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
+/* line 96 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
 nav.footer-nav .controls:hover {
   background-color: #6367b7;
   border-bottom: 4px solid #81c98f;
@@ -677,7 +667,7 @@ nav.footer-nav .controls:hover {
   }
 }
 
-/* line 19 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
+/* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/navigation.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/footer.styl */
 
@@ -702,11 +692,11 @@ footer {
   }
 }
 
-/* line 17 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/footer.styl */
+/* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/layout/footer.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/index.styl */
 
-/* line 16 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/index.styl */
+/* line 17 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/index.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/icons.styl */
 
@@ -721,7 +711,40 @@ footer {
   cursor: pointer;
 }
 
-/* line 72 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/icons.styl */
+/* line 18 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/icons.styl */
+.box-search {
+  position: relative;
+}
+
+/* line 20 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/icons.styl */
+.box-search span {
+  font-size: 4em; /* This controls the size. */
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  border: 0.1em solid #e6e6e6;
+  position: absolute;
+  border-radius: 0.35em;
+  right: 30px;
+  top: 20px;
+}
+
+/* line 30 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/icons.styl */
+.box-search span:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -0.15em;
+  bottom: -0.1em;
+  border-width: 0;
+  background: #e6e6e6;
+  width: 0.2em;
+  height: 0.08em;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/* line 40 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/icons.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/forms.styl */
 
@@ -790,7 +813,7 @@ input#main-search {
   outline: none;
 }
 
-/* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/forms.styl */
+/* line 72 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/forms.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
 
@@ -824,54 +847,13 @@ button:hover {
   background-color: #6367b7;
 }
 
-/* line 41 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
-#searchForUserForm {
-  position: relative;
-  overflow: hidden;
-}
-
-/* line 44 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
-#searchForUserForm .error,
-#searchForUserForm .success {
-  background-color: rgba(14,14,14,0.5);
-  border-radius: 5px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: 0 4em;
-  -webkit-transform: translateY(300%);
-          transform: translateY(300%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #fefefe;
-  height: 50%;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all 3s ease-in-out;
-  transition: all 3s ease-in-out;
-}
-
-/* line 63 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
-#searchForUserForm .success {
-  background-color: rgba(129,201,143,0.8);
-}
-
-/* line 72 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
+/* line 42 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
 .switch-container {
   display: inline-block;
   position: relative;
 }
 
-/* line 75 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
+/* line 45 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
 .switch-container span.point {
   display: inline-block;
   width: 26px;
@@ -890,7 +872,7 @@ button:hover {
   z-index: 2;
 }
 
-/* line 87 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
+/* line 57 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
 .switch-container .switch {
   background: #e6e6e6;
   border-radius: 30px;
@@ -903,7 +885,7 @@ button:hover {
   transition: background 0.4s;
 }
 
-/* line 96 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
+/* line 66 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
 .switch-container .switch:after {
   content: 'off';
   line-height: 30px;
@@ -915,7 +897,7 @@ button:hover {
   z-index: 1;
 }
 
-/* line 105 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
+/* line 75 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
 .switch-container .switch:before {
   content: 'on';
   line-height: 30px;
@@ -927,42 +909,42 @@ button:hover {
   z-index: 1;
 }
 
-/* line 114 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
+/* line 84 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
 .switch-container .switch-checkbox {
   display: none;
 }
 
-/* line 116 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
+/* line 86 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
 .switch-container .switch-checkbox:checked ~ .switch {
   background: #7477bf;
 }
 
-/* line 118 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
+/* line 88 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
 .switch-container .switch-checkbox:checked ~ .switch span.point {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   left: 6px;
 }
 
-/* line 127 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
+/* line 97 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
 
-/* line 128 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
+/* line 98 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
 #form-settings button {
   width: 47%;
   margin: 1.3%;
 }
 
-/* line 131 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
+/* line 101 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
 #form-settings button.cancell {
   background-color: #999;
 }
 
-/* line 133 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
+/* line 103 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
 #form-settings button.cancell:hover {
   background-color: #747474;
 }
 
-/* line 44 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
+/* line 104 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/buttons.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/dialog-box.styl */
 
@@ -1023,7 +1005,89 @@ input[type="checkbox"]:checked ~ #alert-message {
           transition-timing-function: ease-in-out, step-end, step-end, step-end;
 }
 
-/* line 104 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/dialog-box.styl */
+/* line 51 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/dialog-box.styl */
+#searchForUserForm {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 54 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/dialog-box.styl */
+#searchForUserForm .error,
+#searchForUserForm .success {
+  background-color: rgba(14,14,14,0.5);
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 4em;
+  -webkit-transform: translateY(300%);
+          transform: translateY(300%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fefefe;
+  height: 50%;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* line 72 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/dialog-box.styl */
+#searchForUserForm .error {
+  -webkit-transform: translateY(-300%);
+          transform: translateY(-300%);
+}
+
+/* line 74 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/dialog-box.styl */
+#searchForUserForm .success {
+  background-color: rgba(129,201,143,0.8);
+}
+
+/* line 77 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/dialog-box.styl */
+#result {
+  position: relative;
+}
+
+/* line 79 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/dialog-box.styl */
+#result ul {
+  position: absolute;
+  top: -20px;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(14,14,14,0.8);
+  border-radius: 5px;
+  color: #fefefe;
+  font-size: 1.1em;
+  padding: 1em 1.6em;
+  overflow: hidden;
+}
+
+/* line 90 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/dialog-box.styl */
+#result ul li {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0.4em 0.2em;
+  margin: 0.2em 0;
+}
+
+/* line 94 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/dialog-box.styl */
+#result ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* line 97 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/dialog-box.styl */
+#result ul li:hover {
+  background-color: #81c98f;
+}
+
+/* line 98 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/dialog-box.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/boxes.styl */
 
@@ -1198,7 +1262,7 @@ p.arrow {
   margin-left: 8px;
 }
 
-/* line 5 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/boxes.styl */
+/* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/boxes.styl */
 
 /* line 1 : /Users/mattiapiano/Documents/TechDegree/Step_09/web_app_dashboard/src/stylus/components/media.styl */
 

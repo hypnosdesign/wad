@@ -11,17 +11,18 @@ html(lang="en")
       nav.main-nav
         .notify
           img(src="img/icons/icon-bell.svg", alt="Notify Icon")
-          nav
-            p Notify One
-            p Notify Two
+        nav.notify-items
+          p Notify One
+          p Notify Two
         .user-menu
-          img(src="img/user.gif", alt="User Photo")
+          img(src="img/user.jpg", alt="User Photo")
           p Mattia Piano
     #wrapper
       #wrapper-sections
         section.search
           h2 Dashboard
           .box-search
+            span 
             input(type="search", placeholder="Search" id="main-search")
         #dialog-box    
           input(type="checkbox" id="dialog-box-alert")
@@ -136,17 +137,16 @@ html(lang="en")
           section.container.box--message-user
             h4 message user
             form#searchForUserForm.searchForUser
+              
+              input#inputForUserForm(type="search" placeholder="Search for User")
               #result
-                input#inputForUserForm(type="search" placeholder="Search for User")
-                ul
-                  li
               
               textarea#textAreaForUserForm(placeholder="Message for User")
               button(type="submit") send
               .error
-                p errore
+                p <b>OOOoops!</b> <br>please, fill in all fields
               .success
-                p send it
+                p <b>Thank you</b><br> your message has been successfully
           section.container.box--settings
             h4 settings
             form#form-settings
@@ -213,5 +213,5 @@ html(lang="en")
           .controls.controls--settings
             img(src="img/icons/icon-settings.svg", alt="icon settings")
             p settings
-          
+    script(src="js/Chart.min.js")
     script(src="js/app.js")

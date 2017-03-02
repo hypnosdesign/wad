@@ -10,13 +10,12 @@
     <header class="main-header">
       <h1 class="main-title"><b>Your</b>App<sup>TM</sup></h1>
       <nav class="main-nav">
-        <div class="notify"><img src="img/icons/icon-bell.svg" alt="Notify Icon"/>
-          <nav>
-            <p>Notify One</p>
-            <p>Notify Two</p>
-          </nav>
-        </div>
-        <div class="user-menu"><img src="img/user.gif" alt="User Photo"/>
+        <div class="notify"><img src="img/icons/icon-bell.svg" alt="Notify Icon"/></div>
+        <nav class="notify-items">
+          <p>Notify One</p>
+          <p>Notify Two</p>
+        </nav>
+        <div class="user-menu"><img src="img/user.jpg" alt="User Photo"/>
           <p>Mattia Piano</p>
         </div>
       </nav>
@@ -25,7 +24,7 @@
       <div id="wrapper-sections">
         <section class="search">
           <h2>Dashboard</h2>
-          <div class="box-search">
+          <div class="box-search"><span> </span>
             <input type="search" placeholder="Search" id="main-search"/>
           </div>
         </section>
@@ -167,19 +166,15 @@
           <section class="container box--message-user">
             <h4>message user</h4>
             <form class="searchForUser" id="searchForUserForm">
-              <div id="result">
-                <input id="inputForUserForm" type="search" placeholder="Search for User"/>
-                <ul>
-                  <li></li>
-                </ul>
-              </div>
+              <input id="inputForUserForm" type="search" placeholder="Search for User"/>
+              <div id="result"></div>
               <textarea id="textAreaForUserForm" placeholder="Message for User"></textarea>
               <button type="submit">send</button>
               <div class="error">
-                <p>errore</p>
+                <p><b>OOOoops!</b> <br>please, fill in all fields</p>
               </div>
               <div class="success">
-                <p>send it</p>
+                <p><b>Thank you</b><br> your message has been successfully</p>
               </div>
             </form>
           </section>
@@ -259,6 +254,7 @@
         </nav>
       </footer>
     </div>
+    <script src="js/Chart.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

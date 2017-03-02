@@ -43,35 +43,27 @@ nav.main-nav
 /*------------------------------------------ 
   NOTIFY NAV
 ------------------------------------------*/
-.notify
-  nav
-    display: none
-    position: absolute
-    background-color $white
-    color: $black
-    top: 50px
-    border: 1px solid $color_border
-    border-radius: 0px 5px 5px
-    &:before
-      content: '';
-      display: block;
-      position: absolute;
-      top: -17px;
-      left: 0px
-      width: 0;
-      height: 0;
-      border-color: transparent transparent $white transparent
-      border-style: solid;
-      border-width: 8px;
-      z-index: 1
-    p
-      border-bottom: 1px solid $color_border
-      padding: .2em .6em
-      &:last-child
-        border: none
-      &:hover
-        background-color $color_success
-        color: $white
+
+nav.notify-items
+  display: none
+  position: absolute
+  background-color $white
+  color: $black
+  top: 50px
+  right 70px
+  border: 1px solid $color_border
+  border-radius: 0px 5px 5px
+  z-index:5
+  &.visible
+    display: block
+  p
+    border-bottom: 1px solid $color_border
+    padding: .2em .6em
+    &:last-child
+      border: none
+    &:hover
+      background-color $color_success
+      color: $white
 .notify:hover > nav
   display: block
 

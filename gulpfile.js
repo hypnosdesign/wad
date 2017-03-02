@@ -96,16 +96,12 @@ gulp.task('stylus', ()=> {
 // JS
 
 gulp.task('js', ()=> {
-  return gulp.src([
-    './src/js/libs/Chart.min.js',
-    './src/js/app.js'
-    ])
+  return gulp.src('./src/js/app.js')
     .pipe(plumber())
     .pipe(maps.init({loadMaps: true}))
-    .pipe(concat('app.js'))
     .pipe( when(argv.production,
-      uglify()
-      //,beautify()
+      uglify(),
+      beautify()
       )
     )
     .pipe(maps.write('.'))
