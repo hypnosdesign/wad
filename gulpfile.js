@@ -1,7 +1,6 @@
 // init gulp
 const gulp        = require('gulp'),
       maps        = require('gulp-sourcemaps'),
-      concat      = require('gulp-concat'),
       imagemin    = require('gulp-imagemin'),
       stylus      = require('gulp-stylus'),
       beautify    = require('gulp-beautify'),
@@ -10,14 +9,12 @@ const gulp        = require('gulp'),
       plumber     = require('gulp-plumber'),
       pug         = require('gulp-pug'),
       prefix      = require('gulp-autoprefixer'),
-      gutil       = require('gulp-util'),
       browserSync = require('browser-sync').create(),
       reload      = browserSync.reload,
 
       when        = require('gulp-if'),
       argv        = require('yargs').argv,
-      del         = require('del'),
-      typographic = require('typographic');
+      del         = require('del');
 
 /***********************
  * BROWSER SYNC
@@ -83,7 +80,7 @@ gulp.task('stylus', ()=> {
     .pipe( when(argv.production,
       stylus({lineos: false, compress: true}),
       stylus({linenos: true})
-      ).on('error', gutil.log)
+      )
     )
     .pipe(prefix())
     .pipe( when(argv.production, cssnano() ))
